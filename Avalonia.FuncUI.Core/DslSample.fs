@@ -28,7 +28,7 @@ module rec FuncUI =
             apply
         | _ -> failwith "Not a Property"
 
-    let MakeAttrT<'a, 'b> (expr : Expr<'a -> 'b>) : 'b -> 'a -> unit = 
+    let MakeAttrT<'a, 'b> (expr : Expr<'a -> 'b>) : 'b -> Attr<'a> = 
         match expr with
         | Lambda (var, expr) ->
             match expr with 
